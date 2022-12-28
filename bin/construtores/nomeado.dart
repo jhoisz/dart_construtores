@@ -1,10 +1,11 @@
 class Funcionario {
   String nome;
   int? idade;
+  String funcao;
 
-  Funcionario(this.nome, this.idade);
+  Funcionario(this.nome, this.idade, this.funcao);
 
-  Funcionario.semIdade(this.nome);
+  Funcionario.semIdade(this.nome, this.funcao);
 
   @override
   String toString() {
@@ -13,6 +14,7 @@ class Funcionario {
 }
 
 void main() {
-  Funcionario funcionario = Funcionario.semIdade("Pam");
-  print(funcionario);
+  Funcionario funcionario1 =
+      Funcionario("Dwight Schrute", 35, "Assistente Gerente Regional");
+  Funcionario funcionario2 = Funcionario.semIdade("Pam", "Recepcionista");
 }
